@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+import gpiozero
+import time
+
+led = gpiozero.LED(4)
+
+while True:
+    led.on()
+    time.sleep(10)
+    led.off()
+    time.sleep(1)
