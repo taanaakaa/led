@@ -16,7 +16,13 @@ while True:
     distance = us_dev.read_distance( )
     print( "Distance:",distance,"cm")
     if distance <= 10:
-        pi.digitalWrite( LED_PIN , pi.HIGH )
+        i = 0
+        while i <= 5:
+            i += 1
+            pi.digitalWrite( LED_PIN , pi.HIGH )
+            time.sleep(1)
+            pi.digitalWrite( LED_PIN , pi.LOW )
+            time.sleep(1)
     else:
         pi.digitalWrite( LED_PIN , pi.LOW )
     time.sleep(1)
